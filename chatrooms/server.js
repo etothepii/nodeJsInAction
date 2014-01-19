@@ -1,5 +1,5 @@
 var http = require('http');
-var fs = require('fs');
+var fs  = require('fs');
 var path = require('path');
 var mime = require('mime');
 
@@ -13,7 +13,7 @@ function send404(response) {
 
 function sendFile(response, filePath, fileContents) {
   response.writeHead(
-    200,
+    200, 
     {"content-type": mime.lookup(path.basename(filePath))}
   );
   response.end(fileContents);
