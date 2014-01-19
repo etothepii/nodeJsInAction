@@ -67,7 +67,7 @@ function handleNameChangeAttempts(socket, nickNames, namesUsed) {
         }
         else {
             if (namesUsed.indexOf(name) == -1) {
-                var previousName - nickNames[socket.id];
+                var previousName = nickNames[socket.id];
                 var previousNameIndex = namesUsed.indexOf(previousName);
                 namesUsed.push(name);
                 nickNames[socket.id] = name;
