@@ -2,7 +2,6 @@ var http = require('http');
 var fs  = require('fs');
 var path = require('path');
 var mime = require('mime');
-
 var cache = {};
 
 function send404(response) {
@@ -42,12 +41,13 @@ function serveStatic(response, cache, absPath) {
 
 var server = http.createServer(function(request, response) {
   var filePath = false;
-    
+
   if (request.url == '/') {
     filePath = 'public/index.html';
   } else {
     filePath = 'public' + request.url;
   }
+
   var absPath = 'chatrooms/' + filePath;
   serveStatic(response, cache, absPath);
 });
