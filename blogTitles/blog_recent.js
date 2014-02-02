@@ -25,4 +25,4 @@ http.createServer(function(req, res) {
       }
     });
   }
-}).listen(process.env.IP, process.env.PORT);
+}).listen("localhost", 8080);
